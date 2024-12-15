@@ -1,7 +1,7 @@
 import { Card } from "@chakra-ui/react"
 import { Box, Collapsible ,Image} from "@chakra-ui/react"
 import { Button } from "./components/ui/button"
-import './Infobox.css'
+import './InfoBox.css'
 
 export default function InfoBox ({info}){
 
