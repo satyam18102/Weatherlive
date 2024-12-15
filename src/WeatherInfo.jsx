@@ -164,6 +164,7 @@ export default function WeatherInfo (){
           speed:16,
           deg:310,
           direction:"NN",
+          currTemp:20,
         },
       ]);
 

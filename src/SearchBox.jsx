@@ -4,15 +4,17 @@ import { Button,Heading } from "@chakra-ui/react"
 import { LuArrowRight } from "react-icons/lu"
 import { useState } from "react"
 import './SearchBox.css';
-
+// http://dataservice.accuweather.com/currentconditions/v1/189781?apikey=CXLGxRfK3GhLzr2DHfZAoFgnzWi6Bqye&details=true
 
 export default function SearchBox({ updateInfo }) {
   let API_URL="https://dataservice.accuweather.com/locations/v1/"
-  let WEATHER_URL="http://dataservice.accuweather.com/forecasts/v1/hourly/12hour"
-  let DAILY_URL="http://dataservice.accuweather.com/forecasts/v1/daily/1day"
-  let MIN_URL="http://dataservice.accuweather.com/forecasts/v1/minute"
+  let WEATHER_URL="https://dataservice.accuweather.com/forecasts/v1/hourly/12hour"
+  let DAILY_URL="https://dataservice.accuweather.com/forecasts/v1/daily/1day"
+  let MIN_URL="https://dataservice.accuweather.com/forecasts/v1/minute"
+  let CUR_URL="https://dataservice.accuweather.com/currentconditions/v1"
   let API_KEY="Pyfz37xZ5AGCUdlZVIXD1z3SL4MbKoYQ"
   let API_KEY2="CXLGxRfK3GhLzr2DHfZAoFgnzWi6Bqye"
+  let API_KEY3="h3GAmGkipHcEULMhh2mtXuMrp7oADvFW"
   let API_MIN="pxKfMDtBdxEgAAHtgEwWZAeVsNRKs1Xe";
 
   let getWeatherInfo= async()=>{
@@ -30,6 +32,8 @@ export default function SearchBox({ updateInfo }) {
   let jsonResponse=await response.json();
   let daily=await fetch(`${DAILY_URL}/${loc}?apikey=${API_KEY}&details=true&metric=true`);
   let dailyResponse=await daily.json();
+  let currValue=await fetch(`${CUR_URL}/${loc}?apikey=${API_KEY3}&details=true`);
+  let currRes=await currValue.json();
   let result=[
     {
       city:city,
@@ -189,6 +193,7 @@ export default function SearchBox({ updateInfo }) {
       speed:dailyResponse.DailyForecasts[0].Day.Wind.Speed.Value,
       deg:dailyResponse.DailyForecasts[0].Day.Wind.Direction.degrees,
       direction:dailyResponse.DailyForecasts[0].Day.Wind.Direction.English,
+      currTemp:currRes[0].Temperature.Metric.Value,
     },
   ]
   console.log(result[10])

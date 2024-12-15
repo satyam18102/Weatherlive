@@ -26,11 +26,11 @@ export default function InfoBox ({info}){
                 {/* <div className="tem"> */}
                   <div className="tem">
                   <div className="flex">
-                  <Image  src={images[info[10].num]} alt="Weather Icon" className="img"/>
-                  <h1>{info[1].temp} </h1>&deg;C
+                  <Image  src={images[info[1].num]} alt="Weather Icon" className="img"/>
+                  <h1>{info[10].currTemp} </h1>&deg;C
                   </div>
                   <div className="in">
-                    <h3>{info[10].phrase}</h3>
+                    <h3>{info[1].iconPhrase}</h3>
                   </div>
                   </div>
                 {/* </div> */}
