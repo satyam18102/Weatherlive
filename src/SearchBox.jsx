@@ -8,9 +8,9 @@ import './SearchBox.css';
 
 export default function SearchBox({ updateInfo }) {
   let API_URL="https://dataservice.accuweather.com/locations/v1/"
-  let WEATHER_URL="http://dataservice.accuweather.com/forecasts/v1/hourly/12hour"
-  let DAILY_URL="http://dataservice.accuweather.com/forecasts/v1/daily/1day"
-  let MIN_URL="http://dataservice.accuweather.com/forecasts/v1/minute"
+  let WEATHER_URL="https://dataservice.accuweather.com/forecasts/v1/hourly/12hour"
+  let DAILY_URL="https://dataservice.accuweather.com/forecasts/v1/daily/1day"
+  let MIN_URL="https://dataservice.accuweather.com/forecasts/v1/minute"
   let API_KEY="Pyfz37xZ5AGCUdlZVIXD1z3SL4MbKoYQ"
   let API_KEY2="CXLGxRfK3GhLzr2DHfZAoFgnzWi6Bqye"
   let API_MIN="pxKfMDtBdxEgAAHtgEwWZAeVsNRKs1Xe";
