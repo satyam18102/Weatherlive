@@ -219,7 +219,7 @@ export default function SearchBox({ updateInfo }) {
 
   return (
     <div className='searchBox'>
-      <Heading size="3xl" mb="4" >Search for the Weather</Heading>
+      <Heading size="3xl" mb="4" className="not">Search for the Weather</Heading>
       <form onSubmit={handleSubmit}>
       <Field >
         <Input placeholder="Search City" mb="6" onChange={handleChange} required value={city}/>

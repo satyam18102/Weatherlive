@@ -17,9 +17,9 @@ export default function InfoBox ({info}){
 
 
     return (
-        <div>
-        <Card.Root width="650px" >
-          <Card.Body gap="2" >
+        <div className="bg">
+        <Card.Root width="650px" className="bg">
+          <Card.Body gap="2"  >
             <Card.Title mt="2" mb="4" className="city">{info[0].city}</Card.Title>
             <Card.Description>
                 <div className="infob">
@@ -72,7 +72,7 @@ export default function InfoBox ({info}){
           </Card.Footer>
         </Card.Root>
         <Collapsible.Root>
-        <Collapsible.Trigger paddingY="3"><Button variant="outline" colorPalette="blue">Hourly Weather</Button></Collapsible.Trigger>
+        <Collapsible.Trigger paddingY="3"><Button variant="outline" colorPalette="blue" className="btn" >Hourly Weather</Button></Collapsible.Trigger>
         <Collapsible.Content>
           <Box padding="4" borderWidth="1px" className="box">
             <li className="box-list">
