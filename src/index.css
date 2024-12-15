@@ -1,12 +1,17 @@
 :root {
   background-color: #000000;
 
+<<<<<<< HEAD
   /* font-synthesis: none;
+=======
+  font-synthesis: none;
+>>>>>>> 88b9894661f7d4b2a21f38456e1e47d6ebe94f3e
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
 
+<<<<<<< HEAD
 /* a {
   font-weight: 500;
   color: #646cff;
@@ -60,3 +65,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+=======
+
+>>>>>>> 88b9894661f7d4b2a21f38456e1e47d6ebe94f3e
