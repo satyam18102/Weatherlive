@@ -1,0 +1,84 @@
+li{
+    list-style: none;
+}
+ul{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #444242;
+}
+.div{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-self: center;
+    width: 20%;
+}
+img{
+    height: 55px;
+    width: 55px;
+    align-items: center;
+    justify-self: center;
+}
+.infob{
+    display: flex;
+    border-bottom: 1px solid #fff;
+}
+.temp{
+    margin-right: 3rem;
+    text-align: center;
+}
+.tem{
+    margin-right: 1.5rem;
+}
+.flex{
+    display: flex;
+}
+.con{
+    display: flex;
+    margin-left: 2rem;
+}
+.con p{
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+p{
+    color: #fff;
+}
+h1{
+    font-size: 1rem;
+}
+.mt h2{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.mt{
+    margin-top: 1.2rem;
+}
+.svg{
+    display: flex;
+    align-items: center;
+}
+.ml{
+    margin-left: 0.8rem;
+}
+.mr{
+    margin-right: 0.5rem;
+}
+.img{
+    height: 75px;
+    width: 75px;
+}
+.city{
+    font-size: 2rem;
+    align-self: center;
+}
+.in{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+.tem h1{
+    margin-left: 0.8rem;
+    font-size: 2.5rem;
+}
