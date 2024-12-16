@@ -4,6 +4,7 @@ import { Button,Heading } from "@chakra-ui/react"
 import { LuArrowRight } from "react-icons/lu"
 import { useState } from "react"
 import './SearchBox.css';
+import { Spinner, VStack } from "@chakra-ui/react"
 // http://dataservice.accuweather.com/currentconditions/v1/189781?apikey=CXLGxRfK3GhLzr2DHfZAoFgnzWi6Bqye&details=true
 
 export default function SearchBox({ updateInfo }) {
@@ -201,6 +202,7 @@ export default function SearchBox({ updateInfo }) {
   }
 
   let [city,setCity]=useState("");
+  let [loading,setLoading]=useState(false);
 
 
   let handleChange=(evt)=>{
@@ -208,15 +210,17 @@ export default function SearchBox({ updateInfo }) {
   }
 
   let handleSubmit= async(evt)=>{
+    setLoading(true);
     evt.preventDefault();
     console.log(city);
     setCity("");
     let newInfo=await getWeatherInfo();
     updateInfo(newInfo);
+    setLoading(false);
   };
 
 
-
+  if (!loading){
   return (
     <div className='searchBox'>
       <Heading size="3xl" mb="4" className="not">Search for the Weather</Heading>
@@ -231,6 +235,18 @@ export default function SearchBox({ updateInfo }) {
       </form>
     </div>
   )
+  }
+  if(loading){
+  return(
+    <div>
+    <VStack colorPalette="teal">
+      <Spinner color="colorPalette.600" className="loader"/>
+      <Heading color="colorPalette.600" size="xl" mb="8">Loading...</Heading>
+    </VStack> 
+    </div>
+  )
+}
+  
 }
 
 //Loction key="https://dataservice.accuweather.com/locations/v1/search?q=Delhi&apikey=Pyfz37xZ5AGCUdlZVIXD1z3SL4MbKoYQ"
